@@ -75,12 +75,15 @@ public class TestTienda {
 		System.out.println("Stock Actual Disponible: " + tienda.getStockMaximo() + " - " + "Saldo Actual Disponible: " + tienda.getSaldoEnCaja());
 		
 		try {
+			// SUPERA EL MAXIMO DE 3 PRODUCTOS PERMITIDOS.
 			System.out.println("CASO 1:");
 			tienda.carritoVentaDeProductos(new String[] {"AB212", "AC212", "AZ212","AB212"}, new int[] {10, 10, 10});
 			
+			//SUPERA EL MAXIMO DE UNIDADES POR PRODUCTO PERMITIDOS.
 			System.out.println("CASO 2:");
 			tienda.carritoVentaDeProductos(new String[] {"AB212", "AC212", "AZ212"}, new int[] {10, 10, 15});
 			
+			//CUMPLE CON TODOS LOS REQUISITOS.
 			System.out.println("CASO 3:");
 			tienda.carritoVentaDeProductos(new String[] {"AB212", "AC212", "AZ212"}, new int[] {10, 10, 10});
 			System.out.println("Stock Actual Disponible: " + tienda.getStockMaximo() + " - " + "Saldo Actual Disponible: " + tienda.getSaldoEnCaja());
@@ -161,6 +164,7 @@ public class TestTienda {
 		try {
 			System.out.println("Stock Actual Disponible: " + tienda.getStockMaximo() + " - " + "Saldo Actual Disponible: " + tienda.getSaldoEnCaja());
 			
+			//METODO QUE UTILIZA LA API STREAMS DE JAVA
 			List<String> productos = tienda.obtenerComestiblesConMenorDescuento(11D);
 			
 			System.out.println(productos.toString());

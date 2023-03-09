@@ -1,7 +1,7 @@
 #PARTE I – MODELO DEL SISTEMA.
 
 Producto(abstract)
-	*identificador; 
+	*identificador;
 	*descripcion;  
 	*precioUnidad;
 	*precioVenta;
